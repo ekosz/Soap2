@@ -1,0 +1,47 @@
+- @ns = 100
+%h1 Soap 2.0
+#sides
+  #north_side
+    %h1 North Side
+    .stairs
+      %h3 The Stairs
+      .timeleft.hidden=@ns
+      .time
+      %label{:for=>"files[]"} Select song(s) to add to queue
+      %input{:type=>"file", :id=>"files", :name=>"files[]", :multiple=>true} 
+      %ol{:id=>"list"}
+      %input{:type=>"submit"}
+    .vador
+      %h3 The Vador
+      .timeleft.hidden=@ns
+      .time
+      %label{:for=>"files[]"} Select song(s) to add to queue
+      %input{:type=>"file", :id=>"files", :name=>"files[]", :multiple=>true} 
+      %ol{:id=>"list"}
+      %input{:type=>"submit"}
+  #south_side
+    %h1 South Side
+    #l
+      %h3 The L
+      .timeleft.hidden=@ns
+      .time
+      %label{:for=>"files[]"} Select song(s) to add to queue
+      %input{:type=>"file", :id=>"files", :name=>"files[]", :multiple=>true} 
+      %ol{:id=>"list"}
+      %input{:type=>"submit"}
+    .stairs
+      %h3 The Stairs
+      .timeleft.hidden=@ns
+      .time
+      %label{:for=>"files[]"} Select song(s) to add to queue
+      %input{:type=>"file", :id=>"files", :name=>"files[]", :multiple=>true} 
+      %ol{:id=>"list"}
+      %input{:type=>"submit"}
+    .vador
+      %h3 The Vador
+      .timeleft.hidden=@ns
+      .time
+      %label{:for=>"files[]"} Select song(s) to add to queue
+      %input{:type=>"file", :id=>"files", :name=>"files[]", :multiple=>true} 
+      %ol{:id=>"list"}
+      %input{:type=>"submit"}
