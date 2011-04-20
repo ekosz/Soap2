@@ -48,10 +48,13 @@ $(function() {
           return function(e) {
             // Render audio tag.
             var span = document.createElement('li');
-            span.innerHTML = ['<audio src="', e.target.result,
-          '" controls="controls">Your Browser does not support the audio tag',
-          '</audio>'].join('');
-        $(self).siblings("#list").append(span);
+            //ID3.loadTags(e.target.result, function() {
+            //  var tags = ID3.getAllTags(e.target.result);
+            //  alert(tags.artist + " - " + tags.title + ", " + tags.album);
+            //});
+
+            $(span).append(['<audio src="', e.target.result, '" controls="controls">Your Browser does not support the audio tag', '</audio>'].join(''));
+            $(self).siblings("#list").append(span);
           };
         })(f);
 
