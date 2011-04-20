@@ -17,6 +17,7 @@ class MyApp < Sinatra::Base
 
   configure do
     set :views, File.dirname(__FILE__) + '/app/views'
+    set :public, File.dirname(__FILE__)+ '/public'
     Compass.add_project_configuration(File.join(Sinatra::Application.root, 'config', 'compass.config'))
     set :haml, { :format => :html5 }
     set :scss, Compass.sass_engine_options
