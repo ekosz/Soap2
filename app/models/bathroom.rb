@@ -1,12 +1,10 @@
-####
 # Bathrooms act as an observer to all of the playlists in its room.
 # It is in charge of handing out info about its queue / current playlist
 # and starting new palylist as the old ones die.
-####
 
 class Bathroom
   # It has a queue for managing the playlists.
-  # This queue can be accesed from outside the class,
+  # This queue can be accessed from outside the class,
   # but only in a read format.
   attr_reader :queue
 
@@ -30,7 +28,7 @@ class Bathroom
   #
   #     [
   #       {:name=>"Piano Man",
-  #        :artest=>"Billy Joel",
+  #        :artist=>"Billy Joel",
   #        :length=>170 #Length of song in seconds
   #       },
   #       ...
@@ -38,14 +36,14 @@ class Bathroom
   #
   # This data will be ripped from the music files client side
   #
-  # After it creates the playlist is automaticly adds it to its internal
+  # After it creates the playlist is automatically adds it to its internal
   # queue.
   def create_playlist(user, songs, url)
     add_to_queue(Playlist.new(user, songs, url, self))
   end
 
   # `Bathroom#im_done` is called by its playlists as they finish
-  # there sogns.  This will happen after 15mins or if the lengths
+  # there songs.  This will happen after 15mins or if the lengths
   # of the songs are known, then it will stop after all the music
   # has finished.
   #
@@ -63,7 +61,7 @@ class Bathroom
   private
 
   # `Bathroom#add_to_queue` adds playlists to its internal queue, but also
-  # plays the same playlist, if there is no playlist playing at the momment.  
+  # plays the same playlist, if there is no playlist playing at the moment.  
   # If that is the case, then the queue will still be empty after the method
   # is run.
   def add_to_queue(playlist)

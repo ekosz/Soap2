@@ -1,6 +1,6 @@
 ###
-# This class reprecents one users request to play music in a bathroom
-# It is in charge of counting down its timer, and notifing its bathroom
+# This class represents one users request to play music in a bathroom
+# It is in charge of counting down its timer, and notifying its bathroom
 # When it is finished playing
 ###
 
@@ -11,7 +11,7 @@ class Playlist
     @user = user
     @songs = songs 
     @url = url
-    # The timeout is currenly hardcoded, but could be loaded for a 
+    # The timeout is currently hard coded, but could be loaded for a 
     # config file in the future.
     @timeleft = 900
     @bathroom = bathroom
@@ -20,7 +20,7 @@ class Playlist
 
   #### Public Interface
 
-  # `Playlist#time_left` returns the time left until its end in secounds.  This
+  # `Playlist#time_left` returns the time left until its end in seconds.  This
   # can be changed in the future to return a easier to read string format.
   def time_left
     @timeleft
